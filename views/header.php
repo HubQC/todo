@@ -18,7 +18,7 @@
         <title>Never forget another Todo</title>
 
         <!-- Latest compiled and minified CSS -->
-        <!-- <link rel="stylesheet" href="<?php echo CSS ?>/bootstrap.min.css"> -->
+<!--         <link rel="stylesheet" href="--><!--/bootstrap.min.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Optional theme -->
         <link rel="stylesheet" href="<?php echo CSS ?>/bootstrap-theme.min.css">
@@ -27,7 +27,7 @@
 
     <body>
 
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -44,4 +44,5 @@
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
-        </div>
+        </nav>
+

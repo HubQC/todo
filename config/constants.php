@@ -28,9 +28,9 @@ define("todo_status_COMPLETE","Complete");
 define("todo_format_DATE","m-d-Y");
 //Application paths
 
-
+define("APPLICATION_PORT", "8080");
 define("APPLICATION_NAME","todo");
-define("APPLICATION_ROOT", "http://" . $_SERVER["SERVER_NAME"] . "/" . APPLICATION_NAME);
+define("APPLICATION_ROOT", "http://" . $_SERVER["SERVER_NAME"]. ":" . APPLICATION_PORT . "/" . APPLICATION_NAME);
 define("CSS", APPLICATION_ROOT . "/resources/css");
 define("JS", APPLICATION_ROOT . "/resources/js");
 define("CONTROLLER", APPLICATION_ROOT . "/controller");
