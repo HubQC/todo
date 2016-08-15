@@ -1,0 +1,271 @@
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: johnemmanueljd@gmail.com
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | retrieved user record
+auth.php | Password match: 1
+auth.php | Account enabled: 1
+auth.php | auth valid
+json_data_access.php | initializing todosDB
+json_data_access.php | found 4 todos
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 1
+    [desc] => todo 1
+    [date] => 03-14-2016
+    [status] => Not Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 2
+    [desc] => todo 2
+    [date] => 03-14-2016
+    [status] => Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 3
+    [desc] => todo 3
+    [date] => 03-14-2016
+    [status] => Midway
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 4
+    [desc] => todo 4
+    [date] => 03-14-2016
+    [status] => Completed
+)
+
+auth.php | credentials validation failed
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: johnemmanueljd@gmail.com
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | retrieved user record
+auth.php | Password match: 1
+auth.php | Account enabled: 1
+auth.php | auth valid
+json_data_access.php | initializing todosDB
+json_data_access.php | found 4 todos
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 1
+    [desc] => todo 1
+    [date] => 03-14-2016
+    [status] => Not Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 2
+    [desc] => todo 2
+    [date] => 03-14-2016
+    [status] => Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 3
+    [desc] => todo 3
+    [date] => 03-14-2016
+    [status] => Midway
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 4
+    [desc] => todo 4
+    [date] => 03-14-2016
+    [status] => Completed
+)
+
+auth.php | invalid request
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: johnemmanueljd@gmail.com
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | retrieved user record
+auth.php | Password match: 1
+auth.php | Account enabled: 1
+auth.php | auth valid
+json_data_access.php | initializing todosDB
+json_data_access.php | found 4 todos
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 1
+    [desc] => todo 1
+    [date] => 03-14-2016
+    [status] => Not Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 2
+    [desc] => todo 2
+    [date] => 03-14-2016
+    [status] => Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 3
+    [desc] => todo 3
+    [date] => 03-14-2016
+    [status] => Midway
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 4
+    [desc] => todo 4
+    [date] => 03-14-2016
+    [status] => Completed
+)
+
+json_data_access.php | initializing todosDB
+json_data_access.php | found 4 todos
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 1
+    [desc] => todo 1
+    [date] => 03-14-2016
+    [status] => Not Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 2
+    [desc] => todo 2
+    [date] => 03-14-2016
+    [status] => Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 3
+    [desc] => todo 3
+    [date] => 03-14-2016
+    [status] => Midway
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 4
+    [desc] => todo 4
+    [date] => 03-14-2016
+    [status] => Completed
+)
+
+todo.php | Add action
+todo.php | description: todo 5
+todo.php | scheduled date: 2016-08-19
+todo.php | Valid todo. Saving.
+json_data_access.php | initializing todosDB
+json_data_access.php | found 4 todos
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 1
+    [desc] => todo 1
+    [date] => 03-14-2016
+    [status] => Not Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 2
+    [desc] => todo 2
+    [date] => 03-14-2016
+    [status] => Started
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 3
+    [desc] => todo 3
+    [date] => 03-14-2016
+    [status] => Midway
+)
+
+json_data_access.php | converting stdclass to todo obj: stdClass Object
+(
+    [id] => 4
+    [desc] => todo 4
+    [date] => 03-14-2016
+    [status] => Completed
+)
+
+json_data_access.php | pulled todo id: 5
+json_data_access.php | initializing todosDB
