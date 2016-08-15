@@ -23,6 +23,18 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
         exit();
     }
 
+//
+//    (
+//        [user.FIRST_NAME] => John
+//        [user.LAST_NAME] => Admin
+//        [user.EMAIL] => johnemmanueljd@gmail.com
+//        [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+//        [user.SALT] => a8b23da3
+//        [user.TYPE] => USER
+//        [user.ENABLED] => 1
+//    )
+//
+
     todolog("auth.php | credentials validation successful");
     $userName = $_POST["userName"];
     $password = $_POST["password"];
@@ -35,6 +47,7 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
         todolog("auth.php | retrieved user record");
         $salt = $user[user_SALT];
         $enteredPassword = encrypt_password($password, $salt);
+//        $enteredPassword = bf38ba0e2f6cd2f1755348b9bfd49caf;
         $savedPassword = $user[user_PASSWORD];
         $accountEnabled = $user[user_ENABLED];
         todolog("auth.php | Password match: " . ($savedPassword === $enteredPassword));

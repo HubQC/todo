@@ -553,3 +553,89 @@ json_data_access.php | checking with user obj: Array
 )
 
 auth.php | user account not found
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: cqi@wpi.edu
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | user account not found
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: cqi@wpi.edu
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | user account not found
+auth.php | credentials validation successful
+auth.php | trying to retrieve user record
+json_data_access.php | initializing usersDB
+json_data_access.php | found 1 users
+json_data_access.php | converting stdclass to usr obj: stdClass Object
+(
+    [firstName] => John
+    [lastName] => Admin
+    [email] => johnemmanueljd@gmail.com
+    [password] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [salt] => a8b23da3
+    [type] => USER
+    [enabled] => 1
+)
+
+json_data_access.php | trying to retrieve user obj: cqi@wpi.edu
+json_data_access.php | checking with user obj: Array
+(
+    [user.FIRST_NAME] => John
+    [user.LAST_NAME] => Admin
+    [user.EMAIL] => johnemmanueljd@gmail.com
+    [user.PASSWORD] => bf38ba0e2f6cd2f1755348b9bfd49caf
+    [user.SALT] => a8b23da3
+    [user.TYPE] => USER
+    [user.ENABLED] => 1
+)
+
+auth.php | user account not found
+auth.php | credentials validation failed
+auth.php | credentials validation failed
