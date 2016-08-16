@@ -16,9 +16,9 @@ if (count($validationResult) > 0) {
 } else {
 
     $userName = $_POST["userName"];
-    $userNameAvailable = verify_username_availability($userName);
+    $userAlreadyExists = verify_username_availability($userName);
 
-    if($userNameAvailable){
+    if($userAlreadyExists){
         $_SESSION["errors"] = array("userName"=>"Username already exists");
         $url = VIEWS . "/registration_form.php";
         redirect($url);

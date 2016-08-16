@@ -11,8 +11,25 @@ if(session_id() == '' || !isset($_SESSION)) {
     session_start();
 }
 
-if (isset($_POST["action"]) && $_POST["action"] === "Login") {
-    //Retrieve username & password
+/**
+ * @param $savedPassword
+ * @param $enteredPassword
+ * @param $accountEnabled
+ * @return bool
+ */
+function validationPassed($savedPassword, $enteredPassword, $accountEnabled) {
+    return $savedPassword === $enteredPassword && $accountEnabled;
+}
+
+/**
+ * @return bool
+ */
+function loginRequestValidated() {
+    return isset($_POST["action"]) && $_POST["action"] === "Login";
+}
+
+function loginDataValidate() {
+//Retrieve username & password
     $validationResult = validate_credentials($_POST);
 
     if (count($validationResult) > 0) {
@@ -22,6 +39,16 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
         redirect($url);
         exit();
     }
+}
+
+if (!loginRequestValidated()) {
+
+    todolog("auth.php | invalid request");
+    redirect(APPLICATION_ROOT . "/index.php");
+    exit();
+} else {
+
+    loginDataValidate();//if failed , redirect to index.php
 
     todolog("auth.php | credentials validation successful");
     $userName = $_POST["userName"];
@@ -30,7 +57,7 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
     todolog("auth.php | trying to retrieve user record");
     $user = get_user($userName);
 
-    
+
     if ($user) {
         todolog("auth.php | retrieved user record");
         $salt = $user[user_SALT];
@@ -39,19 +66,19 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
         $savedPassword = $user[user_PASSWORD];
         $accountEnabled = $user[user_ENABLED];
         todolog("auth.php | Password match: " . ($savedPassword === $enteredPassword));
-            todolog("auth.php | Account enabled: $accountEnabled");
-        if ($savedPassword === $enteredPassword && $accountEnabled) {
+        todolog("auth.php | Account enabled: $accountEnabled");
+        if (validationPassed($savedPassword, $enteredPassword, $accountEnabled)) {
             todolog("auth.php | auth valid");
             if(session_id() == '' || !isset($_SESSION)) {
                 // session isn't started
                 session_start();
             }
             session_regenerate_id(true);
-            //valid user            
+            //valid user
             $_SESSION[CURRENT_USER] = $user[user_EMAIL];
             //redirect to home page
             redirect(VIEWS . "/home.php");
-            exit();        
+            exit();
         } else {
             todolog("auth.php | auth invalid");
             $errors = [];
@@ -59,22 +86,17 @@ if (isset($_POST["action"]) && $_POST["action"] === "Login") {
             $_SESSION["errors"] = $errors;
             $url = APPLICATION_ROOT . "/index.php";
             redirect($url);
-            exit();            
+            exit();
         }
     } else {
         todolog("auth.php | user account not found");
         $errors = [];
         $errors["auth"] = "Authentication failed. Please check username and password";
         $_SESSION["errors"] = $errors;
-        $url = APPLICATION_ROOT . "/index.php";        
+        $url = APPLICATION_ROOT . "/index.php";
         redirect($url);
         exit();
     }
-
-} else {
-    todolog("auth.php | invalid request");
-    redirect(APPLICATION_ROOT . "/index.php");
-    exit();
 }
 
 ?>
