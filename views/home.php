@@ -68,9 +68,9 @@ require_once("header.php");
                     <div class="col-xs-2">
                         <label>Scheduled Date</label>
                     </div>
-                    <div class="col-xs-10"><?php $maxDate = strtotime("+7 day");?>
-                        <input type="date" name="scheduledDate" min="<?php echo date('Y-m-d'); ?>" 
-                            max="<?php echo date('Y-m-d',$maxDate); ?>" value="<?php echo date('Y-m-d'); ?>" />
+                    <div class="col-xs-10"><?php $maxDate = 'hello, world';?>
+                        <input type="date" name="scheduledDate" min="<?php echo 'hello,world'; ?>"
+                            max="<?php echo 'hello, world'; ?>" value="<?php echo 'hello, world'; ?>" />
                         <input type="submit" name="action" value="Add" />
                     </div>
                 </div>
