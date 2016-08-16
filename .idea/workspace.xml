@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcf08ac8-c8bb-44b1-92ed-6cf97e216333" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/todo.sqlite" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/user.sqlite" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/whatsoever.sqlite" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/auth.php" afterPath="$PROJECT_DIR$/controller/auth.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/todo.log" afterPath="$PROJECT_DIR$/logs/todo.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.php" afterPath="$PROJECT_DIR$/views/home.php" />
-    </list>
+    <list default="true" id="fcf08ac8-c8bb-44b1-92ed-6cf97e216333" name="Default" comment="" />
     <ignored path="todo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -325,12 +317,12 @@
       <option name="presentableId" value="Default" />
       <updated>1471284521195</updated>
       <workItem from="1471284522503" duration="10885000" />
-      <workItem from="1471306811981" duration="1779000" />
+      <workItem from="1471306811981" duration="1942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12664000" />
+    <option name="totallyTimeSpent" value="12827000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
