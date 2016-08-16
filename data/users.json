@@ -1,3 +1,38 @@
 [
-	{"firstName":"John","lastName":"Admin","email":"johnemmanueljd@gmail.com","password":"bf38ba0e2f6cd2f1755348b9bfd49caf","salt":"a8b23da3","type":"USER","enabled":1}
+  {
+    "firstName": "John",
+    "lastName": "Admin",
+    "email": "johnemmanueljd@gmail.com",
+    "password": "bf38ba0e2f6cd2f1755348b9bfd49caf",
+    "salt": "a8b23da3",
+    "type": "USER",
+    "enabled": 1
+  },
+  {
+    "firstName": "Ryu",
+    "lastName": "Admin",
+    "email": "Ryu@gmail.com",
+    "password": "bf38ba0e2f6cd2f1755348b9bfd49caf",
+    "salt": "a8b23da3",
+    "type": "USER",
+    "enabled": 1
+  },
+  {
+    "firstName": "Rashid",
+    "lastName": "Admin",
+    "email": "Rashid@gmail.com",
+    "password": "bf38ba0e2f6cd2f1755348b9bfd49caf",
+    "salt": "a8b23da3",
+    "type": "USER",
+    "enabled": 1
+  },
+  {
+    "firstName": "Karin",
+    "lastName": "Admin",
+    "email": "Kari@gmail.com",
+    "password": "bf38ba0e2f6cd2f1755348b9bfd49caf",
+    "salt": "a8b23da3",
+    "type": "USER",
+    "enabled": 1
+  }
 ]
