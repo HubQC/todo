@@ -4,7 +4,7 @@ require_once(__DIR__ . "/domain.php");
 
 //Database files
 $users_db_file = __DIR__ . "/../data/users.json";
-$todos_db_file = "";
+$todos_db_file =  "";
 //Database in-memory cache
 $usersDB = array();
 $todosDB = array();
@@ -13,11 +13,11 @@ $todosDB = array();
 Private API
 */
 
-function init_users_db(){
+function init_users_db(){ //return a array of user objects(*), called usersDB
 	todolog("json_data_access.php | initializing usersDB");
 	global $usersDB;
 	global $users_db_file;
-	if(!$usersDB){		
+	if(!$usersDB){
 		$users_json_string = file_get_contents($users_db_file);
 		$tmpDB = json_decode($users_json_string);
 		$usersCount = count($tmpDB);
@@ -47,7 +47,7 @@ function init_todos_db(){
 			trigger_error("Please login before trying to access your To Do list");
 		}
 		$todos_db_file = __DIR__ . "/../data/${currentUserId}.json";
-		
+
 		$todos_json_string = file_get_contents($todos_db_file);
 		$tmpDB = json_decode($todos_json_string);
 
@@ -57,7 +57,7 @@ function init_todos_db(){
 		$todoCount = count($stdTodos);
 		//print_r($todoCount);
 		$todosDB = array(
-			"nextId"=>$tmpDB->nextId				
+			"nextId"=>$tmpDB->nextId
 		);
 
 		if($todoCount > 0) {
@@ -131,7 +131,7 @@ function write_todos_db(){
 	$db["nextId"] = $todosDB["nextId"];
 	$dbTodos = array();
 	$tmpTodos = $todosDB["todos"];
-	$noTodos = count($tmpTodos);	
+	$noTodos = count($tmpTodos);
 	for($index=0;$index<$noTodos;$index++){
 		$tmpTodo = $tmpTodos[$index];
 		array_push($dbTodos, format_todo_for_storage($tmpTodo));
@@ -162,9 +162,9 @@ function get_user_array(){
 
 function get_user_object($userId){
 	global $usersDB;
-	init_users_db();
+	init_users_db();//$userDB init
 	$userCount = count($usersDB);
-	
+
 	if($userCount > 0) {
 		todolog("json_data_access.php | trying to retrieve user obj: $userId");
 		$user = false;
@@ -190,9 +190,9 @@ function get_user_object($userId){
 
 function save_todo_object($todo){
 	init_todos_db();
-	global $todosDB;	
+	global $todosDB;
 	//We do not want owner information in the JSON format
-	unset($todo[todo_OWNER]);	
+	unset($todo[todo_OWNER]);
 	//write JSON record
 	$tmpTodos = $todosDB["todos"];
 	array_push($tmpTodos, $todo);
@@ -209,7 +209,7 @@ function get_todo_object($id){
 	init_todos_db();
 }
 
-function get_todo_array($user){	
+function get_todo_array($user){
 	global $todosDB;
 	init_todos_db();
 	return $todosDB["todos"] ? $todosDB["todos"] : array() ;
@@ -217,7 +217,7 @@ function get_todo_array($user){
 
 function delete_todo_object($id){
 	global $todosDB;
-	init_todos_db();	
+	init_todos_db();
 	//write JSON record
 	$tmpTodos = $todosDB["todos"];
 	todolog("json_data_access.php | db: " . print_r($tmpTodos, true));
@@ -244,9 +244,9 @@ function delete_todo_object($id){
 function generate_todo_id(){
 	global $todosDB;
 	//ensure db is initialized and available
-	init_todos_db();	
+	init_todos_db();
 	$id = $todosDB["nextId"];
-	todolog("json_data_access.php | pulled todo id: $id");	
+	todolog("json_data_access.php | pulled todo id: $id");
 
 	return $id;
 }
